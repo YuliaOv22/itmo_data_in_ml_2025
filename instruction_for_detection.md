@@ -112,7 +112,9 @@ label-studio
 3. Прямоугольники могут накладываться друг на друга.
 4. Разметка должна быть выгружена в формате `YOLO`.
 
+
 **ПРИМЕРЫ РАЗМЕТКИ:**
+
 ![alt text](repo_images/image_14.png)
 ![alt text](repo_images/image_15.png)
 
