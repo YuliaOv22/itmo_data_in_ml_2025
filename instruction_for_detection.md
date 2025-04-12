@@ -76,7 +76,7 @@ label-studio
 
 Справа на информационной панели можно увидеть количество размеченных объектов каждого класса и их детальные координаты.
 
-![alt text]repo_images/(image_8.png)
+![alt text](repo_images/mage_8.png)
 
 - **Сохранение разметки**: После завершения разметки нажмите кнопку `Submit` в правом нижнем углу, чтобы сохранить аннотации.
 
@@ -98,6 +98,8 @@ label-studio
 ![alt text](repo_images/image_12.png)
 
 ![alt text](repo_images/image_13.png)
+
+Если остались вопросы, можете посмотреть видеоинструкцию на [YouTube](https://youtu.be/A0cob_f5BmM?si=m2_dhIP0cSPu6XUQ).
 
 
 # Правила аннотации
