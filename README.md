@@ -4,4 +4,6 @@
 
 Модуль 3. Практическое задание ([Домашнее задание 3](https://datacentricaitalenthub.notion.site/3-1cb2ede9914b80378ad2d82fc8335608)) --> Brach lab_3
 
+Модуль 4. Практическое задание ([Домашнее задание 4](https://datacentricaitalenthub.notion.site/4-1cb2ede9914b809c8d64ee2db09823b5))
+
 Итоговый проект. Пайплайн данных в Dagster --> Brach dagstaer_project
