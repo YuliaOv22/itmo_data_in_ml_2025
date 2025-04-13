@@ -1,9 +1,8 @@
-from dagster import Definitions, load_assets_from_modules
-
-from real_fake_news_project import assets  # noqa: TID252
-
-all_assets = load_assets_from_modules([assets])
+from dagster import Definitions
+from .assets.external_assets import ria_news_asset, lentaru_news_asset
+from .jobs.scraping_jobs import parallel_scraping
 
 defs = Definitions(
-    assets=all_assets,
+    assets=[ria_news_asset, lentaru_news_asset],
+    jobs=[parallel_scraping]
 )
