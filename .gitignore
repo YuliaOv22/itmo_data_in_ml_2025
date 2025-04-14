@@ -1,6 +1,9 @@
 #Dagster
 dagster_real_fake_news
 dagster-etl-tutorial
+labels_from_workers
+images
+golden_set
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
