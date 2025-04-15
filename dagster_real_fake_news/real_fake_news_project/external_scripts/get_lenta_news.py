@@ -66,7 +66,7 @@ def generate_date_urls(start_year, start_month, end_month):
 
     date_urls = []
     for month in range(start_month, end_month + 1):
-        for day in range(1, 32):  # Проверяем все возможные дни
+        for day in range(13, 14):  # Проверяем все возможные дни
             date_urls.append(f"{BASE_URL}/{start_year}/{month:02d}/{day:02d}/")
             [
                 date_urls.append(
@@ -82,7 +82,7 @@ def main():
     all_news = []
 
     # Генерируем URL по датам
-    date_urls = generate_date_urls(start_year=2025, start_month=3, end_month=4)
+    date_urls = generate_date_urls(start_year=2025, start_month=4, end_month=4)
 
     try:
         for page_url in tqdm(date_urls, desc="Ссылок для парсинга"):
@@ -95,6 +95,8 @@ def main():
         df = pd.DataFrame(all_news)
         df.to_csv("data/lentaru_news_data.csv", index=False)
         print(f"Спарсено {len(df)} новостей")
+
+        return df
 
 
 if __name__ == "__main__":

@@ -37,13 +37,10 @@ def parse_tgstat_post(url):
         return None
 
 
-def main():
+def main(df):
 
     try:
-        input_csv = "fake_news_links.csv"
-        df = pd.read_csv(input_csv)
         links = df["link"].dropna().tolist() if "link" in df.columns else []
-
         print(f"Найдено {len(links)} ссылок для парсинга")
 
         # 2. Парсим ссылки
@@ -57,10 +54,12 @@ def main():
                     results.append(post_data)
     finally:
         df = pd.DataFrame(results)
-        output_csv = "tgstat_posts_fake.csv"
-        df.to_csv(output_csv, index=False, encoding="utf-8-sig")
+        df.to_csv("data/tgstat_posts_fake.csv", index=False, encoding="utf-8-sig")
         print(f"Данные сохранены")
+
+        return df
 
 
 if __name__ == "__main__":
-    main()
+    df = pd.read_csv("data/fake_news_links.csv")
+    main(df)

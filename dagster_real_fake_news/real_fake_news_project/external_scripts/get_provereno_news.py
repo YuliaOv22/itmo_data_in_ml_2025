@@ -127,7 +127,7 @@ def main():
         driver.get("https://provereno.media")
         page_num = 1
 
-        while True:
+        while page_num < 2:
             print(f"Парсинг страницы {page_num}...")
 
             # Ждем загрузки статей
@@ -183,11 +183,11 @@ def main():
         df["sources_dict"] = df["sources"].apply(
             lambda x: {s["text"]: s["url"] for s in x}
         )
-        df.to_csv(
-            "provereno_articles_with_details.csv", index=False, encoding="utf-8-sig"
-        )
+        df.to_csv("data/provereno_news_data.csv", index=False, encoding="utf-8-sig")
         print(f"Сохранено {len(df)} уникальных статей с дополнительной информацией")
         driver.quit()
+
+        return df
 
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
 #Dagster
 .tmp_dagster_home_9tihje06
 dagster-etl-tutorial
+dagster_storage
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

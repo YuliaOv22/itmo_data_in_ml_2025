@@ -44,7 +44,7 @@ def main():
 
         # Основной цикл подгрузки и парсинга
         page_num = 1
-        while page_num < 10:  # 10 страниц
+        while page_num < 2:  # 2 страницы
             print(f"Обработка страницы {page_num}...")
 
             items = driver.find_elements(By.CSS_SELECTOR, "div.list-item")
@@ -128,6 +128,8 @@ def main():
         df.to_csv("data/ria_news_data.csv", index=False, encoding="utf-8-sig")
         print(f"Сохранено {len(df)} новостей с полным текстом")
         driver.quit()
+
+        return df
 
 
 if __name__ == "__main__":
